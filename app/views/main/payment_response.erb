@@ -1,0 +1,13 @@
+<h1>Payment Info</h1>
+
+<form id="redirect" method="post" name="redirect" action="<%= @payment_path %>">
+  <%= @payment_params %>
+  <% @payment_params.each do |param| %>
+    <input type name="<%= param[:name] %>" value="<%= param[:value] %>">
+  <% end %>
+  <input type="submit" value="Proceed">
+</form>
+
+<script>
+  // document.getElementById("redirect").submit()
+</script>

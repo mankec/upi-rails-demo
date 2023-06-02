@@ -1,0 +1,8 @@
+<%= form_with url: create_payment_path, method: :post do |f| %>
+  <%= f.text_field :txnAmount, value: '', placeholder: 'Amount' %>
+  <%= f.text_field :txnNote, value: 'Test Payment' %>
+  <%= f.text_field :cust_Mobile, value: '1234567890' %>
+  <%= f.text_field :cust_Email, value: 'example@gmail.com' %>
+  <%= f.text_field :order_id, value: "", placeholder: 'ORD ID' %>
+  <%= submit_tag 'Proceed to Payment' %>
+<% end %>
